@@ -1,0 +1,114 @@
+Mongodb install - https://www.mongodb.com/docs/v4.2/tutorial/install-mongodb-on-amazon/
+
+Apache and  PHP install commands - https://tecadmin.net/install-apache24-php7-on-amazon-linux/ 
+
+Log check - sudo journalctl | grep mongod | tail -n 20
+            sudo journalctl | grep apache | tail -n 20
+            
+Syntax Command : /usr/local/apache/bin/httpd -t
+
+Restart Command : /usr/local/apache/bin/httpd -k restart
+
+wget command - wget https://analytics.wineindustrynetwork.com/mysqldatabackup.zip
+
+Zip file command : zip -r [file_name.zip] [directory_name]
+
+Eg :zip -r public_html.zip public_html
+
+unzip mysqldatabackup.zip
+
+File cpy command : cp source_file destination_directory
+
+cp -R mongo home/stagev3/public_html
+
+mysqldump --max_allowed_packet=5120M -u testwinv3 -p testwinv3 > testwinv3.sql
+
+mv testwinv-new2024.sql.temp /home/stagev3/public_html.zip
+
+find / -name "mongo.so"
+
+df  -h 
+checking server space
+
+du -h
+listing files with memosry size
+
+du -sh *
+listing files with memosry size
+
+du -sh
+Total memory size for the current folder
+
+mongodump --host localhost --port 27017 --out /home/analytics/public_html/mysqldatabackup/
+
+mongorestore --db your_database_name path_to_your_dump_directory
+
+mongorestore /home/stage-v3/public_html/mysqldatabackup -- Finally used
+
+mv old_folder_name new_folder_name
+
+MS Office 2019 Install Steps : https://youtu.be/rXRYaPjuprE?si=fhIF_Ym_nYTY2wHq
+
+MySQL Restore : mysql -u [username] -p -h [endpoint] [databasename] < [filename].sql
+
+git add .
+git commit -m "Add a chnage"
+git push origin main
+
+Keygenerate command : ssh-keygen -t rsa -b 2048 -C "karthick"
+
+Command to copy from server to local: (Should be implemented in local)
+scp -i /home/somu/Documents/pem/winephron.pem  ec2-user@54.84.170.35:/home/winv3/public_html.zip /home/somu/Downloads/WinProduction/
+
+Command to move a file from local to server :
+scp -i /home/somu/Documents/pem/winephron.pem /home/somu/backup.sql ec2-user@192.168.1.10:/home/user/backup/
+
+To set the password for particular Database:
+
+CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'Str0ngP@ssw0rd!';
+GRANT ALL PRIVILEGES ON *.* TO 'wordpress'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON your_database_name.* TO 'wordpress'@'localhost';
+FLUSH PRIVILEGES;
+SELECT User, Host FROM mysql.user WHERE User = 'wordpress';
+mysql -u wordpress -p
+
+SHOW FULL PROCESSLIST; To find the slow query
+
+show processlist\G;
+show processlist;
+CALL mysql.rds_kill(process_id);
+
+
+Node Installation (Version 20)
+curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo bash -
+sudo yum install -y nodejs
+node -v
+npm -v
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
